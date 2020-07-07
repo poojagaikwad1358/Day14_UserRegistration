@@ -47,3 +47,15 @@ else
         echo "Invalid number."
 fi
 
+#UseCase5- As a user need to follow pre-defined Password rules.
+#Rule1- Minimum 8 character
+
+read -p "Enter Password: " password
+passwordPattern="[a-zA-Z]{8,}"
+if [[ $password =~ $passwordPattern ]]
+then
+	echo "Valid password."
+else
+	echo "Invalid password."
+fi
+

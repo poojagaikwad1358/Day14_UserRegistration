@@ -80,3 +80,14 @@ else
         echo "Invalid password."
 fi
 
+#UseCase8- Rule4- Has exactly 1 Special character
+
+echo "Enter the User Password:"
+read password4;
+passwordpattern4="[a-z A-Z 0-9 \!\@\#\$\%\^\&\* ? = . ]{8}$"
+if [[ $password4 =~ $passwordpattern4 ]]
+then
+        echo "Valid Password"
+else
+        echo "Invalid Password"
+fi

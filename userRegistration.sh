@@ -51,7 +51,7 @@ fi
 #Rule1- Minimum 8 character
 
 read -p "Enter Password: " password
-passwordPattern="[a-zA-Z]{8,}"
+passwordPattern="[a-z]{8,}"
 if [[ $password =~ $passwordPattern ]]
 then
 	echo "Valid password."
@@ -61,8 +61,19 @@ fi
 
 #UseCase6- Rule2- Should have atleast 1 Upper Case
 read -p "Enter Password: " password2
-passwordPattern2="[a-zA-Z0-9]{8,}"
+passwordPattern2="[a-zA-Z]{8,}"
 if [[ $password2 =~ $passwordPattern2 ]]
+then
+        echo "Valid password."
+else
+        echo "Invalid password."
+fi
+
+#UseCase7- Rule3- Should have atleast 1 numeric number in the password
+
+read -p "Enter Password: " password3
+passwordPattern3="^[a-zA-Z0-9]{8,}"
+if [[ $password3 =~ $passwordPattern3 ]]
 then
         echo "Valid password."
 else

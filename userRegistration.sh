@@ -34,3 +34,16 @@ then
 else
         echo "Invalid EmailId"
 fi
+
+#UseCase4 - As a User need to follow pre-defined Mobile Format
+
+echo "Enter Mobile number: "
+read mobNo;
+mobilePattern="^[0-9]{2}[ ][1-9]{1}[0-9]{9}"
+if [[ $mobNo =~ $mobilePattern ]]
+then
+        echo "Valid number."
+else
+        echo "Invalid number."
+fi
+

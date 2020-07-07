@@ -22,3 +22,15 @@ then
 else
     echo "Invalid"
 fi
+
+#UseCase3 - As a user need to enter valid email.
+
+echo "Enter the User EmailId: "
+read emailId;
+emailIdpattern="^[a-z A-Z 0-9 . - _ +]*[@][a-z 0-9]*[.][a-z ,]*[.][a-z ,]*$"
+if [[ $emailId =~ $emailIdpattern ]]
+then
+        echo "valid EmailId"
+else
+        echo "Invalid EmailId"
+fi

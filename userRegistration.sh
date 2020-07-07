@@ -59,3 +59,13 @@ else
 	echo "Invalid password."
 fi
 
+#UseCase6- Rule2- Should have atleast 1 Upper Case
+read -p "Enter Password: " password2
+passwordPattern2="[a-zA-Z0-9]{8,}"
+if [[ $password2 =~ $passwordPattern2 ]]
+then
+        echo "Valid password."
+else
+        echo "Invalid password."
+fi
+
